@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOLAND SOLUTION - 병원 공조 감염 관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;700;800&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            background-color: #f8fafc;
+            color: #0f172a;
+            word-break: keep-all;
+            scroll-behavior: smooth;
+        }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #0d9488, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bg-glow-mint {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(255,255,255,0) 70%);
+            top: -200px;
+            right: -200px;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <div class="bg-glow-mint"></div>
+
+    <!-- [1] Hero Section -->
+    <header class="min-h-screen flex items-center relative px-6 md:px-12 lg:px-24 pt-20">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 z-10">
+                <div class="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 px-4 py-2 rounded-full text-sm font-bold tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+                    Medical HVAC Solution
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-slate-900">
+                    치료의 공간이<br>
+                    <span class="text-gradient">감염의 매개체</span>가<br>되지 않도록.
+                </h1>
+                <p class="text-xl text-slate-600 font-light leading-relaxed max-w-lg">
+                    보이지 않는 천장 속 공조기(HVAC)는 원내 2차 감염의 가장 치명적인 경로입니다. 
+                    이제, 데이터에 기반한 지능형 방역 인프라로 의료진과 환자의 안전을 증명하십시오.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <!-- 수정 2: 동영상 링크 -->
+                    <a href="medical/medical.mp4" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-bold text-center transition duration-300 shadow-lg shadow-teal-600/30 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-play"></i> 관련영상 보기
+                    </a>
+                    <!-- 수정 3: 전화 걸기 링크 -->
+                    <a href="tel:010-9725-3396" class="bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-full font-bold text-center transition duration-300 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> 담당자 전화상담
+                    </a>
+                </div>
+            </div>
+            <div class="h-[500px] lg:h-[600px] w-full relative mt-12 lg:mt-0 z-0">
+                <!-- 수정 1: 첫 번째 로컬 이미지 삽입 -->
+                <img src="medical/image/no1.png" alt="첨단 병원 수술실" class="w-full h-full object-cover rounded-[2rem] shadow-2xl">
+            </div>
+        </div>
+    </header>
+
+    <!-- [2] Problem Visual Section -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="h-[400px]">
+                    <!-- 수정 1: 두 번째 로컬 이미지 삽입 -->
+                    <img src="medical/image/no2.png" alt="미세 비말핵 그래픽" class="w-full h-full object-cover rounded-[2rem] shadow-xl border border-slate-100">
+                </div>
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
+                        5µm 이하의 위협,<br>공기 전파 메커니즘
+                    </h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        호흡기 감염병을 유발하는 5µm 이하의 미세 비말핵은 중력에 의해 낙하하지 않고 장시간 부유합니다. 불충분한 환기 시스템 하에서 병원의 중앙 공조기는 유해균을 전 병동으로 운반하는 <strong>'고속도로'</strong> 역할을 하게 됩니다.
+                    </p>
+                    <ul class="space-y-4 pt-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-1"></i>
+                            <span class="text-slate-700"><strong>재순환의 역설:</strong> 한 병실의 오염된 공기가 다른 병실로 혼입</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-1"></i>
+                            <span class="text-slate-700"><strong>필터의 변질:</strong> 습기로 인해 필터 자체가 곰팡이 증식처(오염원)로 변질</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [3] Data & Statistics Section -->
+    <section id="data" class="py-24 px-6 md:px-12 lg:px-24 bg-teal-50/50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center text-slate-900">임상 데이터가 경고하는 <span class="text-rose-500">HVAC 리스크</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-500 mb-6 uppercase tracking-wide">중앙공조 미관리 시 감염 위험 증가율</h3>
+                    <div class="font-montserrat text-7xl md:text-8xl font-extrabold text-rose-500 tracking-tighter leading-none mb-6">
+                        8.59<span class="text-4xl">x</span>
+                    </div>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        자연환기 대비, 관리되지 않은 중앙공조 시스템에 노출된 환자의 감염 위험도는 약 8.5배 폭증합니다. 특히 진균(Aspergillus) 감염은 면역 저하 환자에게 치명적인 결과를 초래합니다.
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 space-y-6">
+                    <h4 class="text-slate-800 font-bold mb-6">공조 방식별 감염 상대위험도 (OR)</h4>
+                    
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-32 text-right text-sm text-slate-600 font-medium">자연 환기</div>
+                            <div class="flex-1 bg-slate-100 rounded-full h-6 overflow-hidden">
+                                <div class="bg-slate-400 h-full w-[12%] rounded-full"></div>
+                            </div>
+                            <div class="w-12 text-sm font-bold text-slate-700">1.0</div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-32 text-right text-sm text-slate-600 font-medium">개별 공조 (양호)</div>
+                            <div class="flex-1 bg-slate-100 rounded-full h-6 overflow-hidden">
+                                <div class="bg-blue-400 h-full w-[17%] rounded-full"></div>
+                            </div>
+                            <div class="w-12 text-sm font-bold text-slate-700">1.5</div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-32 text-right text-sm text-slate-600 font-medium">중앙 공조 (양호)</div>
+                            <div class="flex-1 bg-slate-100 rounded-full h-6 overflow-hidden">
+                                <div class="bg-teal-500 h-full w-[37%] rounded-full"></div>
+                            </div>
+                            <div class="w-12 text-sm font-bold text-slate-700">3.2</div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-32 text-right text-sm text-slate-600 font-medium">중앙 공조 (부실)</div>
+                            <div class="flex-1 bg-slate-100 rounded-full h-6 overflow-hidden relative">
+                                <div class="bg-rose-500 h-full w-full rounded-full"></div>
+                            </div>
+                            <div class="w-12 text-sm font-bold text-rose-500">8.59</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [4] How it Works -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-teal-600 font-bold uppercase tracking-wider text-sm">Our Process</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-slate-900">지능형 멸균 솔루션 3단계</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="hover-card bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-teal-600 text-2xl font-bold font-montserrat">01</div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">지능형 모니터링</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">공조기의 가동 상태와 온도, 기류를 실시간으로 감지하여 최적의 살균 타이밍을 AI가 계산합니다.</p>
+                </div>
+                <div class="hover-card bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center relative">
+                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-slate-300"></div>
+                    <div class="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-2xl font-bold font-montserrat">02</div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">100% 건식 연무 분사</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">결로를 유발하지 않는 1µm 초미세 비독성 연무를 생성하여 필터 전단부터 덕트 전체로 확산시킵니다.</p>
+                </div>
+                <div class="hover-card bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-teal-600 text-2xl font-bold font-montserrat">03</div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">바이오필름 원천 차단</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">단단한 세균막 형성을 억제하고 오염원의 유입을 차단하여 무균 상태에 가까운 실내 공기를 공급합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [5] Solution & Image Section -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+                    공조기를 방역의 <br>
+                    <span class="text-teal-400">최전선</span>으로 전환하다
+                </h2>
+                <p class="text-lg text-slate-300 leading-relaxed font-light">
+                    수동적인 필터 청소만으로는 깊숙한 덕트 내부를 통제할 수 없습니다.<br>
+                    ECOLAND의 솔루션은 공조 설비에 직접 결합하여 <strong>스스로 판단하고 멸균하는 능동적 방역 인프라</strong>를 제공합니다.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mt-8">
+                    <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                        <i class="fa-solid fa-droplet-slash text-2xl text-teal-400 mb-3"></i>
+                        <h4 class="font-bold mb-2">Zero 결로</h4>
+                        <p class="text-sm text-slate-400">가전 고장 없는 완전 건식</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                        <i class="fa-solid fa-shield-virus text-2xl text-teal-400 mb-3"></i>
+                        <h4 class="font-bold mb-2">필터 수명 연장</h4>
+                        <p class="text-sm text-slate-400">교체 주기 최대 200% 증가</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[450px] w-full">
+                <!-- 수정 1: 세 번째 로컬 이미지 삽입 -->
+                <img src="medical/image/no3.png" alt="지능형 자동 연무 살균 시스템" class="w-full h-full object-cover rounded-[2rem] shadow-2xl border border-slate-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- [6] Expected Outcomes -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 bg-teal-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center text-slate-900">도입 시 기대 효과</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="h-[400px]">
+                    <!-- 수정 1: 네 번째 로컬 이미지 삽입 -->
+                    <img src="medical/image/no4.png" alt="청정한 병실 환경" class="w-full h-full object-cover rounded-[2rem] shadow-xl border border-teal-200">
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-teal-300 transition-colors">
+                        <div class="bg-teal-100 text-teal-600 w-12 h-12 rounded-full flex items-center justify-center shrink-0 mt-1">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-800 mb-2">원내 감염률(HAI) 저하</h4>
+                            <p class="text-slate-600">입원 환자의 교차 감염을 예방하여 항생제 사용 및 재원 일수 연장으로 인한 불필요한 의료 손실을 방지합니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-teal-300 transition-colors">
+                        <div class="bg-teal-100 text-teal-600 w-12 h-12 rounded-full flex items-center justify-center shrink-0 mt-1">
+                            <i class="fa-solid fa-hospital"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-800 mb-2">병원 브랜드 신뢰도 상승</h4>
+                            <p class="text-slate-600">"첨단 공기 살균 시스템 도입 병원"이라는 타이틀은 환자들에게 프리미엄 의료 환경이라는 강한 신뢰를 부여합니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-teal-300 transition-colors">
+                        <div class="bg-teal-100 text-teal-600 w-12 h-12 rounded-full flex items-center justify-center shrink-0 mt-1">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-800 mb-2">유지보수 비용 절감</h4>
+                            <p class="text-slate-600">공조기 필터 교체 주기를 늘리고, 덕트 청소에 소요되는 막대한 인건비와 다운타임을 획기적으로 줄입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [7] CTA Section -->
+    <section class="py-32 px-6 text-center bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 tracking-tight">
+                의료진과 환자의 숨 쉴 권리,<br>이제 <span class="text-teal-600">시스템</span>으로 증명하십시오.
+            </h2>
+            <p class="text-xl text-slate-500 mb-12 font-light">예방적 공기질 관리는 선택이 아닌 필수 의료 인프라입니다.</p>
+            
+            <!-- 수정 4: 제안서 다운로드 링크 추가 -->
+            <a href="medical/medical report.pdf" download="medical_report.pdf" class="inline-flex items-center justify-center gap-3 bg-teal-600 hover:bg-teal-700 text-white px-12 py-5 rounded-full font-bold text-lg transition duration-300 shadow-xl shadow-teal-600/20 hover:-translate-y-1">
+                <i class="fa-solid fa-file-pdf text-xl"></i> 제안서 다운로드
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-500 text-sm bg-slate-50 border-t border-slate-200">
+        <div class="font-montserrat font-bold text-lg mb-2 text-slate-700">ECOLAND SOLUTION</div>
+        &copy; 2026 Smart HVAC Infection Control. All rights reserved.
+    </footer>
+
+</body>
+</html>
